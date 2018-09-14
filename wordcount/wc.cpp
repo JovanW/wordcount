@@ -34,31 +34,6 @@ int main(int argc, char *argv[])
 			        printf( "the number of characters:%d\n", c);
 			        break;
 				}
-			//case 'w':                   //另一种思路：寻找单词头
-/*				{
-                    char a = fgetc(fp);		            //大循环来返回每读取的一个字节
-                    if( isalnum(a) )                    //开头是特殊字符
-                        w--;
-					else
-                    {
-                        while( !feof(fp) )			    //读取文件直到左后一个字符
-                        {
-                            char b = fgetc(fp)
-                            if( isalnum(b) )            //特殊字符，单词数+1
-                                w++;
-                            char c =fgetc(fp);          //
-                            if( !isalnum(b) )
-                            {
-                                if( isalnum(c) && c != EOF)
-                                    w--;
-                            }
-                        }
-                    }
-            		w++;
-
-            		printf( "the number of words:%d\n", w);
-            		break;
-            	}   */
             case 'w':
                 {
                     char a =fgetc(fp);
@@ -77,22 +52,6 @@ int main(int argc, char *argv[])
                     printf("the number of words:%d\n",w);
                     break;
                 }
-                    //else                            //以特殊符号开头
-                    //if( isalnum(head) ){
-                    /*    while( !feof(fp))
-                        {
-                            char a = fgetc(fp);
-                            if( isalnum(a) )           //返回0
-                                {
-                                    char b =fgetc(fp);
-                                    if( !isalnum(b) )
-                                        w++;
-                                }
-                        }
-                        w++;
-                        printf( "the number of words:%d\n", w);
-                    break;
-                    }   */
                 case 'l':
 				{
 					while( !feof(fp) )							//读取文件直到左后一个字符
@@ -114,4 +73,3 @@ int main(int argc, char *argv[])
 	}
     return 0;
 }
-
